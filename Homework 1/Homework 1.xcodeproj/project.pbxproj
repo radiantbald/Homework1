@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		366B68DE2811EE920066FC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B68DD2811EE920066FC19 /* AppDelegate.swift */; };
 		366B68E02811EE920066FC19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B68DF2811EE920066FC19 /* SceneDelegate.swift */; };
-		366B68E22811EE920066FC19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B68E12811EE920066FC19 /* ViewController.swift */; };
+		366B68E22811EE920066FC19 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B68E12811EE920066FC19 /* MainViewController.swift */; };
 		366B68E72811EE920066FC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366B68E62811EE920066FC19 /* Assets.xcassets */; };
 		366B68EA2811EE920066FC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366B68E82811EE920066FC19 /* LaunchScreen.storyboard */; };
+		366B68F428141B8A0066FC19 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B68F328141B8A0066FC19 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		366B68DA2811EE920066FC19 /* Homework 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homework 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		366B68DD2811EE920066FC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		366B68DF2811EE920066FC19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		366B68E12811EE920066FC19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		366B68E12811EE920066FC19 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		366B68E62811EE920066FC19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		366B68E92811EE920066FC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		366B68EB2811EE920066FC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		366B68F328141B8A0066FC19 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +58,21 @@
 			children = (
 				366B68DD2811EE920066FC19 /* AppDelegate.swift */,
 				366B68DF2811EE920066FC19 /* SceneDelegate.swift */,
-				366B68E12811EE920066FC19 /* ViewController.swift */,
+				366B68E12811EE920066FC19 /* MainViewController.swift */,
+				366B68F528141BA60066FC19 /* LoginView */,
 				366B68E62811EE920066FC19 /* Assets.xcassets */,
 				366B68E82811EE920066FC19 /* LaunchScreen.storyboard */,
 				366B68EB2811EE920066FC19 /* Info.plist */,
 			);
 			path = "Homework 1";
+			sourceTree = "<group>";
+		};
+		366B68F528141BA60066FC19 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				366B68F328141B8A0066FC19 /* LoginView.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				366B68E22811EE920066FC19 /* ViewController.swift in Sources */,
+				366B68E22811EE920066FC19 /* MainViewController.swift in Sources */,
+				366B68F428141B8A0066FC19 /* LoginView.swift in Sources */,
 				366B68DE2811EE920066FC19 /* AppDelegate.swift in Sources */,
 				366B68E02811EE920066FC19 /* SceneDelegate.swift in Sources */,
 			);
