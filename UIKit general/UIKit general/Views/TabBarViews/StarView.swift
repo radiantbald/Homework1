@@ -8,28 +8,28 @@
 import Foundation
 import UIKit
 
-protocol NextButtonDelegate: AnyObject {
-    func onNextButtonTap()
+protocol WeatherButtonDelegate: AnyObject {
+    func onWeatherButtonTap()
 }
 
 class StarView: UIView {
     
     let myBounds = UIScreen.main.bounds
     
-    weak var delegate: NextButtonDelegate?
+    weak var delegate: WeatherButtonDelegate?
     
-    private let nextButton: UIButton
+    private let weatherButton: UIButton
     
     init() {
         
-        // инициализация кнопки "Далее"
+        // инициализация кнопки "Проверить погоду"
         
-        nextButton = .init()
-        nextButton.setTitle("Далее", for: .normal)
-        nextButton.backgroundColor = .systemMint
-        nextButton.layer.cornerRadius = 10
-        nextButton.setTitleColor(.black, for: .normal)
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        weatherButton = .init()
+        weatherButton.setTitle("Проверить погоду", for: .normal)
+        weatherButton.backgroundColor = .systemMint
+        weatherButton.layer.cornerRadius = 10
+        weatherButton.setTitleColor(.black, for: .normal)
+        weatherButton.translatesAutoresizingMaskIntoConstraints = false
         
         // Инициализация самого StarView
         
@@ -47,13 +47,13 @@ class StarView: UIView {
     // функция отображения subViews
     
     func setupViews() {
-        self.addSubview(nextButton)
+        self.addSubview(weatherButton)
     }
     
     // функция действий на View
     
     func setupActions() {
-        nextButton.addTarget(self, action: #selector(onNextButtonTap), for: .touchUpInside)
+        weatherButton.addTarget(self, action: #selector(onWeatherButtonTap), for: .touchUpInside)
     }
     
     // функция настройки constraints
@@ -61,16 +61,16 @@ class StarView: UIView {
     func setupConstraints() {
         
         NSLayoutConstraint.activate([
-            nextButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 80),
-            nextButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
-            nextButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -80),
-            nextButton.heightAnchor.constraint(equalToConstant: 40)
+            weatherButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 80),
+            weatherButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
+            weatherButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -80),
+            weatherButton.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     
     // делегируемая функция нажатия кнопки "Далее"
     
-    @objc func onNextButtonTap() {
-        delegate?.onNextButtonTap()
+    @objc func onWeatherButtonTap() {
+        delegate?.onWeatherButtonTap()
     }
 }

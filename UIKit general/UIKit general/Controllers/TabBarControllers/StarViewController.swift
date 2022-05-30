@@ -10,7 +10,7 @@ import UIKit
 
 // NavigationControllerViewController
 
-class StarViewController: UIViewController, NextButtonDelegate {
+class StarViewController: UIViewController, WeatherButtonDelegate {
     
     private lazy var starView = StarView()
     
@@ -32,10 +32,10 @@ class StarViewController: UIViewController, NextButtonDelegate {
     
     // Функция перехода по кнопке "Далее" при помощи навигации
     
-    func onNextButtonTap() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .white
-        navigationController?.pushViewController(vc, animated: true)
-        print("Кнопка `Далее` (star) нажата")
+    func onWeatherButtonTap() {
+        let weatherVC = WeatherViewController()
+        weatherVC.view.backgroundColor = .white
+        navigationController?.pushViewController(weatherVC, animated: true)
+        print("Кнопка `Посмотреть погоду` нажата")
     }
 }

@@ -18,6 +18,12 @@
 		366B68EA2811EE920066FC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366B68E82811EE920066FC19 /* LaunchScreen.storyboard */; };
 		366B68F428141B8A0066FC19 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B68F328141B8A0066FC19 /* LoginView.swift */; };
 		366B68FB2815771A0066FC19 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B68FA2815771A0066FC19 /* TabBarController.swift */; };
+		36F5A207282AE27E00501A02 /* WeatherNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F5A206282AE27E00501A02 /* WeatherNetworkService.swift */; };
+		36F5A20A282AE5B600501A02 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F5A209282AE5B600501A02 /* NetworkErrors.swift */; };
+		36F5A20C282AE90F00501A02 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F5A20B282AE90F00501A02 /* WeatherViewController.swift */; };
+		36F5A20F282AEDD800501A02 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F5A20E282AEDD800501A02 /* WeatherModel.swift */; };
+		36F5A213282B8CEE00501A02 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F5A212282B8CEE00501A02 /* WeatherView.swift */; };
+		36F5A215282BB7FE00501A02 /* OpenWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F5A214282BB7FE00501A02 /* OpenWeatherAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		366B68EB2811EE920066FC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		366B68F328141B8A0066FC19 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		366B68FA2815771A0066FC19 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		36F5A206282AE27E00501A02 /* WeatherNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkService.swift; sourceTree = "<group>"; };
+		36F5A209282AE5B600501A02 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		36F5A20B282AE90F00501A02 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		36F5A20E282AEDD800501A02 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		36F5A212282B8CEE00501A02 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		36F5A214282BB7FE00501A02 /* OpenWeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 			children = (
 				3655BED9281EB24900CD241E /* StarViewController.swift */,
 				3655BEDB281EB46600CD241E /* GearViewController.swift */,
+				36F5A210282AEEBB00501A02 /* StarViewControllers */,
 			);
 			path = TabBarControllers;
 			sourceTree = "<group>";
@@ -89,6 +102,7 @@
 			children = (
 				3655BEE1282125BE00CD241E /* StarView.swift */,
 				3655BEE328212E2100CD241E /* GearView.swift */,
+				36F5A211282B8CB700501A02 /* StarViews */,
 			);
 			path = TabBarViews;
 			sourceTree = "<group>";
@@ -113,8 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				3655BEDD282121C100CD241E /* Application */,
-				3655BEDE282121E300CD241E /* Controllers */,
+				36F5A20D282AEDC000501A02 /* Models */,
 				3655BEDF2821222800CD241E /* Views */,
+				3655BEDE282121E300CD241E /* Controllers */,
+				36F5A205282AE25600501A02 /* Services */,
+				36F5A208282AE59A00501A02 /* Errors */,
 				366B68E62811EE920066FC19 /* Assets.xcassets */,
 				366B68E82811EE920066FC19 /* LaunchScreen.storyboard */,
 				366B68EB2811EE920066FC19 /* Info.plist */,
@@ -128,6 +145,47 @@
 				366B68F328141B8A0066FC19 /* LoginView.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		36F5A205282AE25600501A02 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				36F5A206282AE27E00501A02 /* WeatherNetworkService.swift */,
+				36F5A214282BB7FE00501A02 /* OpenWeatherAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		36F5A208282AE59A00501A02 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				36F5A209282AE5B600501A02 /* NetworkErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		36F5A20D282AEDC000501A02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36F5A20E282AEDD800501A02 /* WeatherModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36F5A210282AEEBB00501A02 /* StarViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				36F5A20B282AE90F00501A02 /* WeatherViewController.swift */,
+			);
+			path = StarViewControllers;
+			sourceTree = "<group>";
+		};
+		36F5A211282B8CB700501A02 /* StarViews */ = {
+			isa = PBXGroup;
+			children = (
+				36F5A212282B8CEE00501A02 /* WeatherView.swift */,
+			);
+			path = StarViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,13 +258,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F5A207282AE27E00501A02 /* WeatherNetworkService.swift in Sources */,
+				36F5A20C282AE90F00501A02 /* WeatherViewController.swift in Sources */,
 				366B68E22811EE920066FC19 /* MainViewController.swift in Sources */,
 				3655BEDC281EB46600CD241E /* GearViewController.swift in Sources */,
 				366B68F428141B8A0066FC19 /* LoginView.swift in Sources */,
+				36F5A213282B8CEE00501A02 /* WeatherView.swift in Sources */,
+				36F5A20F282AEDD800501A02 /* WeatherModel.swift in Sources */,
 				3655BEE2282125BE00CD241E /* StarView.swift in Sources */,
 				3655BEE428212E2100CD241E /* GearView.swift in Sources */,
 				366B68DE2811EE920066FC19 /* AppDelegate.swift in Sources */,
+				36F5A215282BB7FE00501A02 /* OpenWeatherAPI.swift in Sources */,
 				366B68FB2815771A0066FC19 /* TabBarController.swift in Sources */,
+				36F5A20A282AE5B600501A02 /* NetworkErrors.swift in Sources */,
 				3655BEDA281EB24900CD241E /* StarViewController.swift in Sources */,
 				366B68E02811EE920066FC19 /* SceneDelegate.swift in Sources */,
 			);

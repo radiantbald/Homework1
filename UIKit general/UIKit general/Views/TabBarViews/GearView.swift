@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol NextButtonDelegate: AnyObject {
+    func onNextButtonTap()
+}
+
 class GearView: UIView {
     
     let myBounds = UIScreen.main.bounds
